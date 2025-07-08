@@ -46,3 +46,38 @@ SSG pre-renders HTML pages at build time, serving fast and secure static content
 
 ## 9. TSX
 * TSX is JSX with TypeScript. It allows using JSX syntax in `.tsx` files, combining React with TypeScript’s static typing for safer, more scalable code.
+
+
+## 10. Types of CSS Styling
+
+
+### External CSS
+* CSS is written in a separate `.css` file and linked to the HTML using a `<link>` tag.
+* Keeps styling separate from structure and improves reusability.
+
+### Internal CSS
+* CSS is written inside a `<style>` tag in the `<head>` of the HTML document.
+* Useful for page-specific styles but not ideal for large projects.
+
+### Inline CSS
+* CSS is written directly in the `style` attribute of an HTML element.
+* Useful for quick changes but not recommended for maintainability.
+
+## 11. Vite
+
+Vite is a modern frontend build tool that provides fast development and optimized production builds.
+
+### Why to Use Vite?
+- Lightning-fast dev server with Hot Module Replacement (HMR)
+- Optimized production bundling (uses Rollup)
+- Built-in support for React, Vue, and more
+- Compatible with TypeScript, JSX, TSX, and CSS modules
+
+## 12. ECMAScript Versions
+
+### ES5
+Released in 2009. Introduced `forEach`, `map`, `filter`, `Object.create()`, and strict mode. Fully supported by all browsers.
+
+### ES6+
+Modern JavaScript (2015+). Added `let`, `const`, arrow functions, template literals, destructuring, modules, classes, and promises.
+

@@ -81,3 +81,18 @@ Released in 2009. Introduced `forEach`, `map`, `filter`, `Object.create()`, and 
 ### ES6+
 Modern JavaScript (2015+). Added `let`, `const`, arrow functions, template literals, destructuring, modules, classes, and promises.
 
+## 13. String Case Methods: `toLowerCase()` vs `toLocaleLowerCase()`
+
+### `toLowerCase()`
+- Converts all letters to lowercase.
+- **Does not consider locale/language rules.**
+- Example issue: `'İSTANBUL'.toLowerCase()` → `'i̇stanbul'` (incorrect in Turkish)
+
+### `toLocaleLowerCase()`
+- Converts letters to lowercase based on locale.
+- **Supports language-specific case rules.**
+- Example: `'İSTANBUL'.toLocaleLowerCase('tr')` → `'istanbul'` (correct in Turkish)
+
+### When to Use:
+- Use `toLowerCase()` for general, language-independent comparisons.
+- Use `toLocaleLowerCase('tr')` when working with **Turkish** or other locale-sensitive text.

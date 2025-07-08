@@ -18,4 +18,14 @@ NGINX is a high-performance web server and reverse proxy. It helps with load bal
 
 * Stores static or frequent responses. It speeds up delivery.
 
+## Babel (Transpiler)
+* Babel is a JavaScript transpiler that converts modern JavaScript (ES6+) into backward-compatible versions for older browsers.
+
+
+## Webpack
+* Webpack is a module bundler for JavaScript applications. It takes modules with dependencies and bundles them into a single output file, optimizing the app for deployment.
+
+## Microfrontend
+* Microfrontend architecture breaks a frontend monolith into smaller, independently deployable units, each managed by different teams or technologies.
+
 

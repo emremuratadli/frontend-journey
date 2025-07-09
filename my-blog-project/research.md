@@ -1,4 +1,4 @@
-# HTML5 Semantic Tags and Their Purpose of Use
+# 1. HTML5 Semantic Tags and Their Purpose of Use
 
 ## What Is Semantic HTML ?
 
@@ -46,3 +46,30 @@ Tags: `<header>`, `<nav>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<fi
 
 - **Definition:** Represents self-contained content, typically with a caption.
 - **Purpose:** Used for illustrations, diagrams, or photos along with `<figcaption>`.
+
+# 2. CSS, Flexbox, Grid, and Responsive Design
+
+## What is CSS and what is it used for ?
+
+CSS (Cascading Style Sheets) is used to style the appearance of HTML content. It controls visual aspects like color, font, size, and layout.
+
+**Relation to HTML:**  
+HTML provides the structure; CSS handles the presentation.
+
+**Types of CSS:**
+- **Inline:** Inside the HTML tag via the `style` attribute  
+- **Internal:** Inside a `<style>` block within the HTML `<head>`  
+- **External:** Linked as a separate `.css` file (e.g., `style.css`)
+
+## What is the Box Model ?
+The CSS Box Model explains how HTML elements occupy space and interact with the areas around them. Every element is treated as a rectangular box consisting of four main layers:
+
+- **Content**: The actual content of the element, such as text or images.
+
+- **Padding**: The space around the content. Background color is also visible in this area.
+
+- **Border**: The line surrounding the padding. It can have different widths and styles.
+
+- **Margin**: The space outside the border. It determines the distance between the element and others around it.
+
+This structure helps control spacing, alignment, and visual layout of elements effectively.

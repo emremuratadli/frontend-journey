@@ -73,3 +73,109 @@ The CSS Box Model explains how HTML elements occupy space and interact with the 
 - **Margin**: The space outside the border. It determines the distance between the element and others around it.
 
 This structure helps control spacing, alignment, and visual layout of elements effectively.
+
+## What is Flexbox and When Is It Used?
+Flexbox is a CSS layout method used to arrange items in one dimension (row or column). It's helpful when aligning, spacing, or distributing elements inside a container, especially in responsive design.
+
+### display: flex
+- **Definition:** Turns an element into a flex container, enabling its child elements to follow the Flexbox layout rules.
+
+**Example:**
+```
+<div style="display: flex;">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+```
+
+### flex-direction
+- **Definition:** Defines the direction of the main axis, determining how flex items are placed inside the container.
+
+**Values:**
+
+- row (default): Items are placed horizontally, left to right.
+
+- column: Items are placed vertically, top to bottom.
+
+- row-reverse: Items are placed horizontally, right to left.
+
+- column-reverse: Items are placed vertically, bottom to top.
+
+**Example:**
+```
+<div style="display: flex; flex-direction: column;">
+  <div>Box 1</div>
+  <div>Box 2</div>
+</div>
+```
+
+### justify-content
+- **Definition:** Aligns flex items along the main axis (horizontal by default).
+
+**Values:**
+
+- flex-start: Items are aligned to the start.
+
+- center: Items are centered.
+
+- flex-end: Items are aligned to the end.
+
+- space-between: Equal space between items.
+
+- space-around: Equal space around items.
+
+- space-evenly: Equal space between and around all items.
+
+**Example:**
+```
+<div style="display: flex; justify-content: space-between;">
+  <div>Item A</div>
+  <div>Item B</div>
+  <div>Item C</div>
+</div>
+```
+
+### align-items
+- **Definition:** Aligns flex items along the cross axis (vertical by default).
+
+**Values:**
+
+- stretch (default): Items stretch to fill the container.
+
+- flex-start: Items align to the top.
+
+- center: Items are vertically centered.
+
+- flex-end: Items align to the bottom.
+
+### gap
+- **Definition:** Adds space between flex items. Cleaner and more efficient than using margins.
+
+**Example:**
+```
+<div style="display: flex; gap: 20px;">
+  <div>Box 1</div>
+  <div>Box 2</div>
+</div>
+```
+
+### flex-wrap
+- **Definition:** Controls whether flex items should wrap to the next line when they don't fit in a single row.
+
+**Values:**
+
+- nowrap (default): Items stay in a single line.
+
+- wrap: Items wrap onto multiple lines.
+
+- wrap-reverse: Items wrap in reverse order.
+
+**Example:**
+```
+<div style="display: flex; flex-wrap: wrap;">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+```

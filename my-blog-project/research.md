@@ -81,7 +81,7 @@ Flexbox is a CSS layout method used to arrange items in one dimension (row or co
 - **Definition:** Turns an element into a flex container, enabling its child elements to follow the Flexbox layout rules.
 
 **Example:**
-```
+```css
 <div style="display: flex;">
   <div>Item 1</div>
   <div>Item 2</div>
@@ -102,7 +102,7 @@ Flexbox is a CSS layout method used to arrange items in one dimension (row or co
 - column-reverse: Items are placed vertically, bottom to top.
 
 **Example:**
-```
+```css
 <div style="display: flex; flex-direction: column;">
   <div>Box 1</div>
   <div>Box 2</div>
@@ -127,7 +127,7 @@ Flexbox is a CSS layout method used to arrange items in one dimension (row or co
 - space-evenly: Equal space between and around all items.
 
 **Example:**
-```
+```css
 <div style="display: flex; justify-content: space-between;">
   <div>Item A</div>
   <div>Item B</div>
@@ -152,7 +152,7 @@ Flexbox is a CSS layout method used to arrange items in one dimension (row or co
 - **Definition:** Adds space between flex items. Cleaner and more efficient than using margins.
 
 **Example:**
-```
+```css
 <div style="display: flex; gap: 20px;">
   <div>Box 1</div>
   <div>Box 2</div>
@@ -171,7 +171,7 @@ Flexbox is a CSS layout method used to arrange items in one dimension (row or co
 - wrap-reverse: Items wrap in reverse order.
 
 **Example:**
-```
+```css
 <div style="display: flex; flex-wrap: wrap;">
   <div class="item">1</div>
   <div class="item">2</div>
@@ -210,3 +210,34 @@ Creates 3 columns: one fixed, two flexible.
 - Short-hand for aligning items both vertically and horizontally.
 
 `place-items: center;`
+
+## What is Responsive Design and Why Is It Important?
+
+Responsive design is a design approach that ensures a website looks and functions well on all devices and screen sizes from mobile phones to desktop computers. It improves user experience and accessibility by adapting the layout and elements to different viewports.
+
+### `@media` Queries
+
+- **Definition:**  `@media` queries are used in CSS to apply different styles based on device characteristics like screen width, height, or orientation.
+
+**Example:**
+```css
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+```
+
+### Mobile-First Design Principle
+
+- **Definition:** Mobile-first design means starting your design process with mobile devices in mind, then progressively enhancing for larger screens. This approach prioritizes core content and performance.
+
+### What is Viewport?
+- **Definition:** The viewport is the visible area of a web page on a device screen. Its size changes depending on the device.
+
+- **Meta Viewport Tag:** This HTML tag tells the browser how to adjust the page’s dimensions and scaling.
+
+**Example:**
+```css
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```

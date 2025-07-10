@@ -179,3 +179,34 @@ Flexbox is a CSS layout method used to arrange items in one dimension (row or co
   <div class="item">4</div>
 </div>
 ```
+
+## What is CSS Grid and When to Use It?
+CSS Grid is a two-dimensional layout system used to arrange elements in rows and columns. It's ideal for creating complex layouts where both horizontal and vertical alignment are needed.
+
+### grid-template-columns
+- Defines the number and width of columns in a grid.
+
+
+`grid-template-columns: 200px 1fr 2fr;`
+
+Creates 3 columns: one fixed, two flexible.
+
+### grid-template-rows
+- Defines the number and height of rows in a grid.
+
+`grid-template-rows: 100px auto 50px;`
+
+### grid-area
+- Specifies where an item is placed in the grid using row/column start and end.
+
+`grid-area: 1 / 2 / 3 / 4;`
+
+### gap
+- Sets space between rows and columns.
+
+`gap: 10px;`
+
+### place-items
+- Short-hand for aligning items both vertically and horizontally.
+
+`place-items: center;`

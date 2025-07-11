@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+font-size:62.5% /* 1rem = 10px, for easier calculations */
+}
+
+body {
+   font-size: 1.6rem; /* 16px */
+    font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: black;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: blue;
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+main section {
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+aside section {
+  margin-bottom: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+footer {
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}

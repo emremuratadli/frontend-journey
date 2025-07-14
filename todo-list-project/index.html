@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+            <p class="subtitle">Organize and track your daily tasks</p>
+            <p class="description">Add tasks you need to complete, delete finished ones, and boost your productivity. Simple, fast, and convenient!</p>
+        </header>
+
+        <div class="todo-app">
+            <div class="task-section">
+                <h2>New Task</h2>
+                <div class="input-container">
+                    <input type="text" id="taskInput" placeholder="Enter task...">
+                    <button id="addBtn" class="add-btn">+</button>
+                </div>
+            </div>
+
+            <div class="todo-section">
+                <div class="section-header">
+                    <h2>Task List</h2>
+                    <button id="clearAllBtn" class="clear-btn">Clear All</button>
+                </div>
+                
+                <ul id="todoList" class="todo-list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+                
+                <div id="emptyState" class="empty-state">
+                    <p>No tasks added yet. You can add new tasks from above.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

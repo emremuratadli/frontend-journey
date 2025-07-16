@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFilter - Movie Discovery App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="container">
+        <header>
+            <h1>🎬 FilmFilter</h1>
+            <p>Discover your next favorite movie</p>
+        </header>
+
+        <div class="controls">
+            <!-- Watch Later Button - Positioned absolute in top right -->
+            <button id="watchLaterBtn">Watch Later</button>
+            
+            <div class="control-group">
+                <label for="ratingFilter">Minimum Rating:</label>
+                <div class="input-button-group">
+                    <input type="number" id="ratingFilter" min="0" max="10" step="0.1" placeholder="e.g. 8.0">
+                    <button id="filterBtn">Filter</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label for="searchInput">Search Movies:</label>
+                <input type="text" id="searchInput" placeholder="Search by title...">
+            </div>
+
+            <div class="control-group">
+                <label for="runtimeSlider">Movie Duration:</label>
+                <div class="slider-container">
+                    <input type="range" id="runtimeSlider" min="60" max="240" value="180" step="10">
+                    <div class="slider-labels">
+                        <span>60 min</span>
+                        <span id="runtimeValue">180 min</span>
+                        <span>240 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <button id="sortBtn">Sort by Year</button>
+                <button id="showComedyBtn">Show Comedy Movies</button>
+                <button id="checkYear2000Btn">Check Movies After 2000</button>
+                <button id="calculateAvgBtn">Calculate Average Rating</button>
+                <button id="clearFiltersBtn">Clear All Filters</button>
+            </div>
+        </div>
+
+        <!-- Dark Mode Toggle - Fixed to top right -->
+        <button id="darkModeToggle" data-emoji="🌙">🌙 Dark Mode</button>
+
+        <div class="stats">
+            <div id="results-info">Loading movies...</div>
+        </div>
+
+        <div class="movies-grid" id="moviesContainer">
+            <!-- Movies will be loaded here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 FilmFilter. All rights reserved.</p>
+            <p>Discover your next favorite movie with ease</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

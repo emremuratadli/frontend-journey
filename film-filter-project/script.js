@@ -122,22 +122,27 @@ function filterByRating() {
     console.log(`Filter applied: Movies with rating >= ${minRating}`);
 }
 
-// Search movies by title (using filter method)
+// Search movies by title (using find method for exact match or filter with find for partial)
 function searchMovies() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     
     if (searchTerm === '') {
         filteredMovies = [...allMovies];
     } else {
-        // Using filter() method - shows movies with title containing search term
-        filteredMovies = allMovies.filter(movie => 
-            movie.Title.toLowerCase().includes(searchTerm)
-        );
+        // Using filter() with find() method - shows movies where we can find the search term
+        filteredMovies = allMovies.filter(movie => {
+            // Split title into words and use find to see if any word starts with search term
+            const titleWords = movie.Title.toLowerCase().split(' ');
+            const foundWord = titleWords.find(word => word.startsWith(searchTerm));
+            
+            // If no word starts with search term, check if title contains it
+            return foundWord !== undefined || movie.Title.toLowerCase().includes(searchTerm);
+        });
     }
     
     displayMovies(filteredMovies);
     updateResultsInfo();
-    console.log(`Search applied: "${searchTerm}"`);
+    console.log(`Search applied with find(): "${searchTerm}"`);
 }
 
 // Sort movies by year (using sort method)
@@ -338,6 +343,12 @@ function demonstrateArrayMethods() {
     // Using includes() - check if specific title exists in titles array
     const hasInception = movieTitles.includes('Inception');
     console.log('Has "Inception" movie:', hasInception);
+    
+    // Using find() for search - find movie by partial title match
+    const searchResult = allMovies.find(movie => 
+        movie.Title.toLowerCase().includes('dark')
+    );
+    console.log('First movie with "dark" in title:', searchResult?.Title);
     
     // Using flat() - demonstration with nested arrays (example data)
     const exampleGenres = [['Comedy', 'Drama'], ['Action'], ['Thriller', 'Mystery']];

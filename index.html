@@ -6,133 +6,133 @@
     <title>Frontend Journey - Emre Murat Adlı</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            min-height: 100vh; 
-            padding: 20px; 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
-        .container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            background: rgba(255, 255, 255, 0.95); 
-            border-radius: 20px; 
-            padding: 40px; 
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         .header { text-align: center; margin-bottom: 50px; }
-        .header h1 { 
-            font-size: 3rem; 
-            color: #333; 
-            margin-bottom: 10px; 
-            background: linear-gradient(45deg, #667eea, #764ba2); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+        .header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         .header p { font-size: 1.2rem; color: #666; margin-bottom: 10px; }
         .subtitle { font-size: 1rem; color: #888; margin-bottom: 30px; }
         .projects-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-            gap: 30px; 
-            margin-bottom: 40px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
-        .project-card { 
-            background: white; 
-            border-radius: 15px; 
-            padding: 30px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 2px solid transparent;
         }
-        .project-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             border-color: #667eea;
         }
-        .project-card h3 { 
-            font-size: 1.5rem; 
-            color: #333; 
-            margin-bottom: 15px; 
-            display: flex; 
-            align-items: center; 
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
             gap: 10px;
         }
         .project-card p { color: #666; line-height: 1.6; margin-bottom: 20px; }
-        .tech-stack { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 8px; 
-            margin-bottom: 20px; 
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
         }
-        .tech-tag { 
-            background: linear-gradient(45deg, #667eea, #764ba2); 
-            color: white; 
-            padding: 4px 12px; 
-            border-radius: 20px; 
-            font-size: 0.8rem; 
+        .tech-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 500;
         }
         .project-links { display: flex; gap: 10px; flex-wrap: wrap; }
-        .btn { 
-            padding: 10px 20px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: 500; 
-            transition: all 0.3s ease; 
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
             text-align: center;
             flex: 1;
             min-width: 120px;
         }
-        .btn-primary { 
-            background: linear-gradient(45deg, #667eea, #764ba2); 
-            color: white; 
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
         }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); 
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
-        .btn-secondary { 
-            background: transparent; 
-            color: #667eea; 
-            border: 2px solid #667eea; 
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
         }
         .btn-secondary:hover { background: #667eea; color: white; }
-        .footer { 
-            text-align: center; 
-            margin-top: 40px; 
-            padding-top: 30px; 
-            border-top: 2px solid #eee; 
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
         }
         .footer p { color: #666; margin-bottom: 20px; }
-        .social-links { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        .social-links a { 
-            color: #667eea; 
-            font-size: 1.5rem; 
-            text-decoration: none; 
-            transition: transform 0.3s ease; 
+        .social-links a {
+            color: #667eea;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
         }
         .social-links a:hover { transform: scale(1.2); }
-        .stats { 
-            display: flex; 
-            justify-content: center; 
-            gap: 40px; 
-            margin: 30px 0; 
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
             flex-wrap: wrap;
         }
         .stat { text-align: center; }
-        .stat-number { 
-            font-size: 2rem; 
-            font-weight: bold; 
-            color: #667eea; 
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
         }
         .stat-label { font-size: 0.9rem; color: #888; }
-        @media (max-width: 768px) { 
+        @media (max-width: 768px) {
             .header h1 { font-size: 2rem; }
             .projects-grid { grid-template-columns: 1fr; }
             .project-links { flex-direction: column; }
@@ -143,13 +143,12 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1> Frontend Journey</h1>
+            <h1>Frontend Journey</h1>
             <p>Showcasing my web development skills through modern JavaScript, CSS, and HTML projects</p>
             <p class="subtitle"><strong>Emre Murat Adlı</strong> - Frontend Developer</p>
-            
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number">3</div>
+                    <div class="stat-number">4</div>
                     <div class="stat-label">Live Projects</div>
                 </div>
                 <div class="stat">
@@ -162,10 +161,24 @@
                 </div>
             </div>
         </div>
-        
         <div class="projects-grid">
             <div class="project-card">
-                <h3> FilmFilter</h3>
+                <h3>Browser Information Display</h3>
+                <p>A modern web application that displays comprehensive browser and device information using JavaScript's Navigator and Screen APIs, along with demonstrations of various string methods.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">JavaScript ES6+</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">Google Fonts</span>
+                    <span class="tech-tag">Browser APIs</span>
+                </div>
+                <div class="project-links">
+                    <a href="browser-info-project/" class="btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/browser-info-project" class="btn btn-secondary">Source Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>FilmFilter</h3>
                 <p>A comprehensive movie discovery platform built to learn JavaScript array methods. Features 1000+ movies database, advanced filtering, and modern UI with dark mode support.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">JavaScript ES6+</span>
@@ -175,13 +188,12 @@
                     <span class="tech-tag">IntersectionObserver</span>
                 </div>
                 <div class="project-links">
-                    <a href="film-filter-project/" class="btn btn-primary"> Live Demo</a>
-                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/film-filter-project" class="btn btn-secondary"> Source Code</a>
+                    <a href="film-filter-project/" class="btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/film-filter-project" class="btn btn-secondary">Source Code</a>
                 </div>
             </div>
-            
             <div class="project-card">
-                <h3> Todo List</h3>
+                <h3>Todo List</h3>
                 <p>A modern task management application with category filtering, local storage persistence, and clean user interface. Perfect for organizing daily tasks and projects.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">JavaScript</span>
@@ -191,13 +203,12 @@
                     <span class="tech-tag">Responsive Design</span>
                 </div>
                 <div class="project-links">
-                    <a href="todo-list-project/" class="btn btn-primary"> Live Demo</a>
-                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/todo-list-project" class="btn btn-secondary"> Source Code</a>
+                    <a href="todo-list-project/" class="btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/todo-list-project" class="btn btn-secondary">Source Code</a>
                 </div>
             </div>
-            
             <div class="project-card">
-                <h3> Personal Blog</h3>
+                <h3>Personal Blog</h3>
                 <p>A responsive blog website showcasing modern web standards, clean typography, and optimized performance. Built with semantic HTML and modern CSS techniques.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">HTML5</span>
@@ -207,18 +218,17 @@
                     <span class="tech-tag">SEO Optimized</span>
                 </div>
                 <div class="project-links">
-                    <a href="my-blog-project/" class="btn btn-primary"> Live Demo</a>
-                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/my-blog-project" class="btn btn-secondary"> Source Code</a>
+                    <a href="my-blog-project/" class="btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/emremuratadli/frontend-journey/tree/main/my-blog-project" class="btn btn-secondary">Source Code</a>
                 </div>
             </div>
         </div>
-        
         <div class="footer">
             <p>These projects represent my frontend development journey. Each project explores different technologies and concepts to build modern, interactive web applications.</p>
             <div class="social-links">
-                <a href="https://github.com/emremuratadli" title="GitHub" target="_blank"></a>
-                <a href="#" title="LinkedIn" target="_blank"></a>
-                <a href="#" title="Email" target="_blank"></a>
+                <a href="https://github.com/emremuratadli" title="GitHub" target="_blank">GitHub</a>
+                <a href="#" title="LinkedIn" target="_blank">LinkedIn</a>
+                <a href="#" title="Email" target="_blank">Email</a>
             </div>
         </div>
     </div>

@@ -6,7 +6,13 @@ Welcome to my frontend development portfolio! This repository showcases my web d
 
 **[Visit My Portfolio](https://emremuratadli.github.io/frontend-journey/)**
 
+
 ## Projects
+
+### [JSONPlaceholder User Management System](https://emremuratadli.github.io/frontend-journey/js-modules-api-project/)
+- **Tech Stack:** HTML5, CSS3, JavaScript ES6+ (Modules, OOP, async/await)
+- **Features:** List/add/delete users, form validation, modular code, responsive UI
+- **Highlights:** Uses JSONPlaceholder API, modern UI with Poppins font, ES6 modules, async/await, class-based structure
 
 ### [Browser Information Display](https://emremuratadli.github.io/frontend-journey/browser-info-project/)
 - **Tech Stack:** HTML5, CSS3, JavaScript ES6+, Google Fonts
@@ -29,7 +35,6 @@ Welcome to my frontend development portfolio! This repository showcases my web d
 - **Highlights:** Interactive UI, data persistence
 
 ## Technologies Used
-
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 - **Tools:** Git, GitHub Pages
 - **APIs:** Browser APIs (Navigator, Screen), JSON data handling, localStorage

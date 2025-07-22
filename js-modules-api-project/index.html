@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder User Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👥 User Management System</h1>
+            <p>User Management with JSONPlaceholder API</p>
+        </header>
+
+        <main>
+            <section class="controls">
+                <button id="loadUsersBtn" class="btn btn-primary">Load Users</button>
+                <button id="addUserBtn" class="btn btn-success">Add New User</button>
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Loading...</span>
+                </div>
+            </section>
+
+            <section class="user-form" id="userForm" style="display: none;">
+                <h3>Create New User</h3>
+                <form id="createUserForm">
+                    <div class="form-group">
+                        <label for="userName">Name:</label>
+                        <input type="text" id="userName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone">Phone:</label>
+                        <input type="tel" id="userPhone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userWebsite">Website:</label>
+                        <input type="url" id="userWebsite" name="website" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="users-container">
+                <div id="usersGrid" class="users-grid">
+                    <!-- Users will be displayed here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 - Modular JavaScript Application</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

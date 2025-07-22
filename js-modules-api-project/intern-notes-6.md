@@ -731,3 +731,25 @@ project.tasks.forEach(task => {
 console.log("\n--- User Tasks ---");
 developer.listTasks();
 ```
+
+---
+
+## What is Regex and How to Use It?
+
+Regex (Regular Expression) is a powerful tool used to search, match, or replace specific patterns in text. It is widely used in programming languages and text editors.
+
+### Common Use Cases
+- Email address validation
+- Finding or replacing digits in text
+- URL validation
+
+### Examples
+- `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` : Email validation
+- `/\D/g` : Finds all non-digit characters in text
+- `/^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/\S*)?$/` : Basic URL validation
+
+### Usage in JavaScript
+```js
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const isValid = emailRegex.test('test@example.com'); // true
+```
